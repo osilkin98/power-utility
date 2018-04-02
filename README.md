@@ -4,7 +4,7 @@ CLI utility to read and display battery information.
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 ## Installation
-Just run `install.sh` as `root` and it will a
+Just run `install.sh` as `root` and it will automatically install the files accordingly.
 
 ## Usage: `power <option>`
 Example: `power -t`   # Displays the time until battery is empty/full
