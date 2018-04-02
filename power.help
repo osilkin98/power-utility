@@ -1,0 +1,20 @@
+This is a script for displaying information regarding
+battery device information, mainly for laptops.
+
+This help display can be displayed anytime by using
+'-h' or '--help'.
+
+Usage: power [OPTIONS, ...]
+
+       -h -- Displays help information [--help]
+
+       -p -- Battery Percentage [--power, --percent]
+
+       -c -- Battery Capacity [--capacity]
+
+       -t -- Time remaining until battery empty
+       	     [--time-remaining]
+
+
+No arguments will just default to the command:
+`upower -i /org/freedesktop/UPower/devices/battery_BAT0`
