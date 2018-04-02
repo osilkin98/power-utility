@@ -48,9 +48,9 @@ elif [ "$1" = "-T" ] || [ "$1" = "--technology" ]; then
     upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "technology"
 elif [ "$1" = "-I" ] || [ "$1" = "--icon-name" ]; then
     upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "icon-name"
-elif [ "$1" = "-C" ] || [ "$1" = "--history-charge" ]; then
+elif [ "$1" = "-C" ] || [ "$1" = "--charge-history" ]; then
     upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -A 1 "History (charge)"
-elif [ "$1" = "-H" ] || [ "$1" = "--history-rate" ]; then
+elif [ "$1" = "-H" ] || [ "$1" = "--rate-history" ]; then
     upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -A 1 "History (rate)"
 elif [ "$1" = "-V" ] || [ "$1" = "--vendor" ]; then
     upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "vendor"
