@@ -24,6 +24,50 @@ elif [ "$1" = "-c" ] || [ "$1" = "--capacity" ]; then
     upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "capacity"
 elif [ "$1" = "-t" ] || [ "$1" = "--time-remaining" ]; then
     upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "time"
+elif [ "$1" = "-P" ] || [ "$1" = "--present" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "present"
+elif [ "$1" = "-R" ] || [ "$1" = "--recharge" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "rechargeable"
+elif [ "$1" = "-s" ] || [ "$1" = "--state" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "state"
+elif [ "$1" = "-w" ] || [ "$1" = "--warning" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "warning"
+elif [ "$1" = "-e" ] || [ "$1" = "--energy" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "energy"
+elif [ "$1" = "-E" ] || [ "$1" = "--energy-empty" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "energy-empty"
+elif [ "$1" = "-F" ] || [ "$1" = "--energy-full" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "energy-full"
+elif [ "$1" = "-D" ] || [ "$1" = "--full-design" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "energy-full-design"
+elif [ "$1" = "-r" ] || [ "$1" = "--energy-rate" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "energy-rate"
+elif [ "$1" = "-v" ] || [ "$1" = "--voltage" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "voltage"
+elif [ "$1" = "-T" ] || [ "$1" = "--technology" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "technology"
+elif [ "$1" = "-I" ] || [ "$1" = "--icon-name" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "icon-name"
+elif [ "$1" = "-C" ] || [ "$1" = "--history-charge" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -A 1 "History (charge)"
+elif [ "$1" = "-H" ] || [ "$1" = "--history-rate" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -A 1 "History (rate)"
+elif [ "$1" = "-V" ] || [ "$1" = "--vendor" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "vendor"
+elif [ "$1" = "-N" ] || [ "$1" = "--path" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "native-path"
+elif [ "$1" = "-m" ] || [ "$1" = "--model" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "model"
+elif [ "$1" = "-S" ] || [ "$1" = "--serial" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "serial"
+elif [ "$1" = "--power-supply" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "power supply"
+elif [ "$1" = "-L" ] || [ "$1" = "--last-updated" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "updated"
+elif [ "$1" = "--has-history" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "has history"
+elif [ "$1" = "--has-stats" ]; then
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "has statistics"
 elif [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
     cat "/usr/share/power/power.help"
 else
